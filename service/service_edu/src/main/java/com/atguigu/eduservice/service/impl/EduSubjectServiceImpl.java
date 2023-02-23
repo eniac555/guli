@@ -3,6 +3,7 @@ package com.atguigu.eduservice.service.impl;
 import com.alibaba.excel.EasyExcel;
 import com.atguigu.eduservice.entity.EduSubject;
 import com.atguigu.eduservice.entity.excel.SubjectDate;
+import com.atguigu.eduservice.entity.subject.OneSubject;
 import com.atguigu.eduservice.listener.SubjectExcelListener;
 import com.atguigu.eduservice.mapper.EduSubjectMapper;
 import com.atguigu.eduservice.service.EduSubjectService;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * <p>
@@ -36,5 +38,11 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public List<OneSubject> getAllOneTwoSubject() {
+
+        return null;
     }
 }
