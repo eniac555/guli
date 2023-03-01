@@ -60,7 +60,7 @@ public class EduChapterController {
         chapterService.updateById(eduChapter);
         return R.ok().data("chapter",eduChapter);
     }
-    
+
 
     //删除的方法
     @DeleteMapping("{chapterId}")
