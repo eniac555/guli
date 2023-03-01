@@ -25,6 +25,7 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("/eduservice/chapter")
 public class EduChapterController {
+
     @Autowired
     private EduChapterService chapterService;
 
@@ -36,12 +37,14 @@ public class EduChapterController {
         return R.ok().data("allChapterVideo",list);
     }
 
+
     //添加章节的方法
     @PostMapping("addChapter")
     public R addChapter(@RequestBody EduChapter eduChapter){
         chapterService.save(eduChapter);
         return R.ok();
     }
+
 
     //根据章节id查询
     @GetMapping("getChapterInfo/{chapterId}")
@@ -57,6 +60,7 @@ public class EduChapterController {
         chapterService.updateById(eduChapter);
         return R.ok().data("chapter",eduChapter);
     }
+    
 
     //删除的方法
     @DeleteMapping("{chapterId}")

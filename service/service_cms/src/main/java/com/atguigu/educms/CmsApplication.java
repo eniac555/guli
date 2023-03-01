@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan({"com.atguigu"}) //指定扫描位置
-//@MapperScan("com.atguigu.cmsservice.mapper")
+@MapperScan("com.atguigu.educms.mapper")
 public class CmsApplication {
     public static void main(String[] args) {
         SpringApplication.run(CmsApplication.class, args);
