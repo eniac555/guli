@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Api(description="课程分类管理")
 @RestController
-@RequestMapping("/eduservice/subject")
+@RequestMapping("/eduservice/subject")//对应前端.js文件中的路径
 @CrossOrigin
 public class EduSubjectController {
 

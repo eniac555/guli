@@ -1,6 +1,7 @@
 package com.atguigu.eduservice.mapper;
 
 import com.atguigu.eduservice.entity.EduCourse;
+import com.atguigu.eduservice.entity.vo.CoursePublishVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -12,5 +13,10 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2023-02-23
  */
 public interface EduCourseMapper extends BaseMapper<EduCourse> {
+
+    //根据课程id返回课程最终确认信息，查询多张表
+    CoursePublishVo getCoursePublishInfo(String courseId);
+
+
 
 }
