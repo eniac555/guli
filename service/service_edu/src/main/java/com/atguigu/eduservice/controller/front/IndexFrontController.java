@@ -43,7 +43,7 @@ public class IndexFrontController {
         List<EduTeacher> eduTeacherList = teacherService.list(wrapper2);
 
         //返回结果
-        return R.ok().data("eduList",eduList).data("eduTeacherList",eduTeacherList);
+        return R.ok().data("eduList",eduList).data("teacherList",eduTeacherList);
     }
 
 }

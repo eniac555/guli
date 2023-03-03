@@ -16,6 +16,7 @@ public class EduLoginController {
     }
 
 
+
     //info
     @GetMapping("info")
     public R info(){
