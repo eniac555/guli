@@ -21,10 +21,7 @@ public class MsmServiceImpl implements MsmService {
     @Override
     public boolean send(Map<String, Object> param, String phone) {
         if(StringUtils.isEmpty(phone)) return false;
-        DefaultProfile profile = DefaultProfile.
-                getProfile("default", "LTAI5t6UMxcC4gkSVDUqL3UL",
-                        "g8iKer6AwToQPwfB1AHO1Dakrw3hqM");
-        IAcsClient client = new DefaultAcsClient(profile);
+        
 
         //设置参数  固定的
         CommonRequest request = new CommonRequest();
