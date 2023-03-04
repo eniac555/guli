@@ -14,6 +14,7 @@
         <module name="service_edu" />
         <module name="service_msm" />
         <module name="service_cms" />
+        <module name="service_ucenter" />
       </profile>
     </annotationProcessing>
   </component>
@@ -28,6 +29,7 @@
       <module name="service_edu" options="-parameters" />
       <module name="service_msm" options="-parameters" />
       <module name="service_oss" options="-parameters" />
+      <module name="service_ucenter" options="-parameters" />
       <module name="service_vod" options="-parameters" />
     </option>
   </component>
