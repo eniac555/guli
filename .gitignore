@@ -1,5 +1,6 @@
 *.properties
 resources/*
+MsmServiceImpl.java
 
 
 HELP.md
