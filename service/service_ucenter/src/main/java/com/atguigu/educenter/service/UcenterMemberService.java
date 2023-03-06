@@ -19,4 +19,8 @@ public interface UcenterMemberService extends IService<UcenterMember> {
 
     //注册
     void register(RegisterVo registerVo);
+
+    //根据openID判断用户是否存在，并取出用户
+    UcenterMember getOpenIdMember(String openid);
+
 }

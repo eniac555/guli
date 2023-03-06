@@ -56,7 +56,8 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         //把输入的密码进行加密，再和数据库比较
         //加密方式  MD5
 
-        String password1 = MD5.encrypt(mobileMember.getPassword());
+        String password1 = mobileMember.getPassword();
+        password = MD5.encrypt(password);
         if (!password.equals(password1)) {
             throw new GuliException(20001, "登录失败");
         }
@@ -116,4 +117,17 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
     }
 
 
+    //根据openID判断用户是否存在，并取出用户
+    @Override
+    public UcenterMember getOpenIdMember(String openid) {
+        QueryWrapper<UcenterMember> wrapper = new QueryWrapper<>();
+        wrapper.eq("openid",openid);
+        UcenterMember member = baseMapper.selectOne(wrapper);
+        return member;
+    }
+
+
 }
+
+
+

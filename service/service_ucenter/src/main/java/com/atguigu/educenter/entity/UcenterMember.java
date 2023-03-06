@@ -30,7 +30,7 @@ public class UcenterMember implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "会员id")
-    @TableId(value = "id", type = IdType.ID_WORKER)
+    @TableId(value = "id", type = IdType.ID_WORKER_STR)
     private String id;
 
     @ApiModelProperty(value = "微信openid")
