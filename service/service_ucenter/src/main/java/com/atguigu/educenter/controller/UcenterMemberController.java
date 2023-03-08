@@ -3,10 +3,13 @@ package com.atguigu.educenter.controller;
 
 import com.atguigu.commonutils.JwtUtils;
 import com.atguigu.commonutils.R;
+import com.atguigu.commonutils.ordervo.UcenterMemberOrder;
 import com.atguigu.educenter.entity.UcenterMember;
 import com.atguigu.educenter.entity.vo.RegisterVo;
 import com.atguigu.educenter.service.UcenterMemberService;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import io.swagger.annotations.Api;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,6 +58,20 @@ public class UcenterMemberController {
         UcenterMember member = memberService.getById(memberId);
         return R.ok().data("userInfo",member);
     }
+
+
+    //根据用户id获得用户信息，这个接口用来被创建订单时远程调用使用
+    @PostMapping("getUserInfoOrder/{id}")
+    public UcenterMemberOrder getUserInfoOrder(@PathVariable String id){
+        //UcenterMemberOrder，这个类的作用就是让在被调用端和调用端返回相同的对象，方便取数据
+        //所以在common里面新建了这个类，让不同模块都能使用
+        UcenterMember member = memberService.getById(id);
+        UcenterMemberOrder memberOrder = new UcenterMemberOrder();
+        BeanUtils.copyProperties(member,memberOrder);
+
+        return memberOrder;
+    }
+
 
 
 }
