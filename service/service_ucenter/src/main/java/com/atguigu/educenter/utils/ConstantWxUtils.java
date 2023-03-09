@@ -7,14 +7,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConstantWxUtils implements InitializingBean {
 
-
-    @Value("${wx.open.app_id}")
+    @Value("wxed9954c01bb89b47")
+    //@Value("${wx.open.app_id}")
     private String appId;
 
-    @Value("${wx.open.app_secret}")
+    //@Value("${wx.open.app_secret}")
+    @Value("a7482517235173ddb4083788de60b90e")
     private String appSecret;
 
-    @Value("${wx.open.redirect_url}")
+    //@Value("${wx.open.redirect_url}")
+    @Value("http://localhost:8160/api/ucenter/wx/callback")
     private String redirectUrl;
 
     public static String WX_OPEN_APP_ID;
