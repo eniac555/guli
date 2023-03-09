@@ -73,6 +73,15 @@ public class UcenterMemberController {
     }
 
 
+    //创建统计当日注册人数的方法，用于生成统计表中的数据，然后统计模块远程调用这个方法获得数据
+    @GetMapping("countRegister/{day}")
+    public R countRegister(@PathVariable String day){
+        Integer count = memberService.countRegisterDay(day);
+        return R.ok().data("countRegister",count);
+    }
+
+
+
 
 }
 
