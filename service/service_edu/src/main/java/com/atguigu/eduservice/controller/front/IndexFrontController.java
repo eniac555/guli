@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@CrossOrigin
+ 
 @RequestMapping("/eduservice/indexfront")
 public class IndexFrontController {
     //查询热门课程和名师的接口

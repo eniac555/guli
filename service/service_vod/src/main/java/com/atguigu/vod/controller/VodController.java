@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/eduvod/video")//对应前端.js文件中的路径
-@CrossOrigin
+ 
 public class VodController {
 
     @Autowired

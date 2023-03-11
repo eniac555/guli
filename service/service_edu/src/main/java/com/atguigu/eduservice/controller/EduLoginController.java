@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController//交给spring管理
 @RequestMapping("/eduservice/user")//请求的地址
-@CrossOrigin
+ 
 public class EduLoginController {
 
 

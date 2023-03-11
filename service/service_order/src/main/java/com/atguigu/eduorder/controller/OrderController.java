@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
  * @since 2023-03-08
  */
 @RestController
-@CrossOrigin
+ 
 @RequestMapping("/eduorder/order")
 public class OrderController {
 

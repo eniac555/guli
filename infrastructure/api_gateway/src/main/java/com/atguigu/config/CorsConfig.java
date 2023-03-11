@@ -46,7 +46,6 @@ import org.springframework.web.util.pattern.PathPatternParser;
  * @date 2019/01/02
  */
 
-/*
 @Configuration
 public class CorsConfig {
     @Bean
@@ -61,5 +60,5 @@ public class CorsConfig {
 
         return new CorsWebFilter(source);
     }
-}*/
+}
 

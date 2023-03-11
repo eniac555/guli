@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 
 @Controller//只是请求地址，不需要返回数据
-@CrossOrigin
+ 
 @RequestMapping("/api/ucenter/wx")
 public class WxApiController {
 

@@ -32,7 +32,7 @@ import java.util.Map;
 
 
 @Api(description = "讲师管理")//
-@CrossOrigin//解决跨域
+ //解决跨域
 @RestController
 @RequestMapping("/eduservice/teacher")
 public class EduTeacherController {
